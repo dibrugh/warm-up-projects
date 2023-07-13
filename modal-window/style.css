@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.modalWrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Затемнение экрана */
+.backdrop {
+    width: 100%;
+    height: 100%;
+    /* Можно использовать fixed */
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    opacity: 0.5;
+    z-index: 9999;
+}
+
+.modal {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: relative;
+    width: 50%;
+    max-width: 400px;
+    height: 80%;
+    max-height: 400px;
+    background: #fff;
+    z-index: 10000;
+    border-radius: 8px;
+}
+
+.modalCross {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.modalCross:hover {
+    color: tomato;
+}
+
+.modalOkButton {
+    border: none;
+    padding: 5px 8px;
+    border-radius: 4px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    background: #1d9f4f;
+}
+
+.modalOkButton:hover {
+    background: #3fac69;
+}
+
+.modalCancelButton {
+    border: none;
+    padding: 5px 8px;
+    border-radius: 4px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    background: #451414;
+    color: white;
+}
+
+.modalCancelButton:hover {
+    background: #712323;
+}
